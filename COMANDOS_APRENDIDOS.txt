@@ -12,7 +12,7 @@ git diff --staged
 git log
 git log -p
 git log -p -1
-clear
+clear - 
 gitk
 git log --pretty=oneline
 git commit --amend -m "mensagem"
