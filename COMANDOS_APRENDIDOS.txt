@@ -1,36 +1,37 @@
-git config --global user.name "nome de usuario"
-git config --global user.email "email@email.com"
-git init
-git status
-git add .
-git add *.'extenção'
-git add 'nomedo.arq'
-git commit -m "Mensagem"
-touch .gitignore
-git diff
-git diff --staged
-git log
-git log -p
-git log -p -1
-clear - 
-gitk
-git log --pretty=oneline
-git commit --amend -m "mensagem"
-git restore --staged 'nomedo.arq'
-git restore 'nomedo.arq'
-git tag
-git tag -a 'nome da tag' -m "Mengsagem"
-git show 'tag'
-git checkout 'tag'
-git checkout 'master'
-git tag -d 'tag'
-git branch 'nomeDaBranch'
-git checkout -b 'nomeDaBranch'
-git merge 'branchOrigem'
-git branch -d 'nomeDaBranch'
-git init --bare
-git clone file:////'nomeDoServer'
-git remote
-git push
-git pull
-git fetch
+configura um nome de usuario                                        --> git config --global user.name "nome de usuario"
+configura um email de usuario                                       --> git config --global user.email "email@email.com"
+cria um novo repositorio local                                      --> git init
+para saber o status atual do repositorio local                      --> git status
+adiciona todos os arquivos pendentes à staging area                 --> git add .
+adiciona todos os arquivos da extensão escolhida à staging area     --> git add *.'extenção'
+adiciona um arquivo especifico à staging area                       --> git add 'nomedo.arq'
+confirma/salva as alterações do projeto                             --> git commit -m "Mensagem"
+cria a pasta ".gitignore" que serve para ignorar alguns arquivos    --> touch .gitignore
+para consultar as alterações de um arquivo                          --> git diff
+para consultar as alterações que estão na staged area               --> git diff --staged
+mostra um log de todos os commits feitos                            --> git log
+mostra os logs em ordem de data decrescente                         --> git log -p
+limita a quantidade de commits aparecidos no log                    --> git log -p -1
+limpa o terminal git                                                --> clear
+para visualizar os relatorios de alterações                         --> gitk
+mostra todos os commits no sistema e a chave de referencia          --> git log --pretty=oneline
+juntar a alteração atual com um commit já feito                     --> git commit --amend -m "mensagem"
+tira um arquivo da staged area                                      --> git restore --staged 'nomedo.arq'
+reverte as alterações feitas no ultimo commit                       --> git restore 'nomedo.arq'
+lista as tags criadas                                               --> git tag
+cria uma tag anotada                                                --> git tag -a 'nome da tag' -m "Mengsagem"
+para saber mais sobre uma tag                                       --> git show 'tag'
+para ver os arquivos de uma determinada tag                         --> git checkout 'tag'
+para ir ao branch master/main                                       --> git checkout 'master'
+deleta uma tag                                                      --> git tag -d 'tag'
+cria uma nova branch                                                --> git branch 'nomeDaBranch'
+cria e faz a troca para uma branch nova                             --> git checkout -b 'nomeDaBranch'
+mescla as informações de uma branch com a branch-master             --> git merge 'branchOrigem'
+deleta uma branch                                                   --> git branch -d 'nomeDaBranch'
+cria um repositorio que fica ser disponivel para outras maquinas    --> git init --bare
+clona as pasta do servidor no repositorio local                     --> git clone file:////'nomeDoServer'
+mostra o nome do servidor remoto                                    --> git remote
+envia o projeto pro servidor                                        --> git push
+pega arquivos do servidor e faz um merge automatico na branch atual --> git pull
+pega os arquivos do servidor sem fazer o merge                      --> git fetch
+cria um par de chave ssh                                            --> ssh-keygen
